@@ -1,0 +1,9 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+D:/Xilinx_project/axi4_lite_F/axi4_lite_F.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,uvm,,,,,,
+D:/Xilinx_project/axi4_lite_F/axi4_lite_F.srcs/sim_1/new/axi4_lite_top_tb.sv,1758604414,systemVerilog,,,,tb_axi4_lite_top,,uvm,../../../../../../Insrall_Dir/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/Xilinx_project/axi4_lite_F/axi4_lite_F.srcs/sources_1/new/axi4_lite_master.sv,1758575630,systemVerilog,,D:/Xilinx_project/axi4_lite_F/axi4_lite_F.srcs/sources_1/new/axi4_lite_top.sv,,axi4_lite_master,,uvm,../../../../../../Insrall_Dir/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/Xilinx_project/axi4_lite_F/axi4_lite_F.srcs/sources_1/new/axi4_lite_slave.v,1758575657,verilog,,,,axi4_lite_slave,,uvm,../../../../../../Insrall_Dir/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/Xilinx_project/axi4_lite_F/axi4_lite_F.srcs/sources_1/new/axi4_lite_top.sv,1758575856,systemVerilog,,D:/Xilinx_project/axi4_lite_F/axi4_lite_F.srcs/sim_1/new/axi4_lite_top_tb.sv,,axi4_lite_top,,uvm,../../../../../../Insrall_Dir/2025.1/Vivado/data/rsb/busdef,,,,,
