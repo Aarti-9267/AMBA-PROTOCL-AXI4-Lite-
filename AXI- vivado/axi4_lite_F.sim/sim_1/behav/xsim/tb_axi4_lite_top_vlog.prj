@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../Insrall_Dir/2025.1/Vivado/data/rsb/busdef" \
+"../../../../axi4_lite_F.srcs/sources_1/new/axi4_lite_slave.v" \
+
+sv xil_defaultlib  --include "../../../../../../Insrall_Dir/2025.1/Vivado/data/rsb/busdef" \
+"../../../../axi4_lite_F.srcs/sources_1/new/axi4_lite_master.sv" \
+"../../../../axi4_lite_F.srcs/sources_1/new/axi4_lite_top.sv" \
+"../../../../axi4_lite_F.srcs/sim_1/new/axi4_lite_top_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

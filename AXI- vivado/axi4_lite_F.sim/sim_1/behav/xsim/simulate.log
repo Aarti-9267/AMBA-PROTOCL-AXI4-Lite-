@@ -1,0 +1,186 @@
+Time resolution is 1 ps
+
+=== AXI4-Lite Enhanced Testbench Started ===
+Time: 0 - Applying Reset
+Time: 30000 - Reset Released
+
+--- IDLE Phase ---
+
+--- First WRITE Transaction ---
+Time: 50000 - Writing 0xDEADBEEF to address 0x00000004
+
+--- Signal Monitor at Time: 75000 ---
+MASTER STATE: 1 (   WRITE_CHANNEL)
+SLAVE STATE:  0 (            IDLE)
+  WRITE ADDR:   AWVALID=1, AWREADY=0, AWADDR=0x00000004
+  WRITE DATA:   WVALID=1, WREADY=0, WDATA=0xdeadbeef, WSTRB=1111
+  WRITE RESP:   BVALID=0, BREADY=1, BRESP=00
+
+--- Signal Monitor at Time: 85000 ---
+MASTER STATE: 1 (   WRITE_CHANNEL)
+SLAVE STATE:  1 (   WRITE_CHANNEL)
+  WRITE ADDR:   AWVALID=1, AWREADY=1, AWADDR=0x00000004
+  WRITE DATA:   WVALID=1, WREADY=1, WDATA=0xdeadbeef, WSTRB=1111
+  WRITE RESP:   BVALID=0, BREADY=1, BRESP=00
+Time: 85000 - WRITE ADDRESS HANDSHAKE: Addr=0x00000004
+Time: 85000 - WRITE DATA HANDSHAKE: Data=0xdeadbeef
+
+--- Signal Monitor at Time: 95000 ---
+MASTER STATE: 2 (   WRESP_CHANNEL)
+SLAVE STATE:  2 (   WRESP_CHANNEL)
+  WRITE RESP:   BVALID=1, BREADY=1, BRESP=00
+Time: 95000 - WRITE RESPONSE HANDSHAKE: BRESP=00
+Time: 95000 - Write completed: Addr=0x00000004, Data=0xdeadbeef
+
+--- Second WRITE Transaction ---
+Time: 95000 - Writing 0xCAFEBABE to address 0x00000008
+
+--- Signal Monitor at Time: 125000 ---
+MASTER STATE: 1 (   WRITE_CHANNEL)
+SLAVE STATE:  0 (            IDLE)
+  WRITE ADDR:   AWVALID=1, AWREADY=0, AWADDR=0x00000008
+  WRITE DATA:   WVALID=1, WREADY=0, WDATA=0xcafebabe, WSTRB=1111
+  WRITE RESP:   BVALID=0, BREADY=1, BRESP=00
+
+--- Signal Monitor at Time: 135000 ---
+MASTER STATE: 1 (   WRITE_CHANNEL)
+SLAVE STATE:  1 (   WRITE_CHANNEL)
+  WRITE ADDR:   AWVALID=1, AWREADY=1, AWADDR=0x00000008
+  WRITE DATA:   WVALID=1, WREADY=1, WDATA=0xcafebabe, WSTRB=1111
+  WRITE RESP:   BVALID=0, BREADY=1, BRESP=00
+Time: 135000 - WRITE ADDRESS HANDSHAKE: Addr=0x00000008
+Time: 135000 - WRITE DATA HANDSHAKE: Data=0xcafebabe
+
+--- Signal Monitor at Time: 145000 ---
+MASTER STATE: 2 (   WRESP_CHANNEL)
+SLAVE STATE:  2 (   WRESP_CHANNEL)
+  WRITE RESP:   BVALID=1, BREADY=1, BRESP=00
+Time: 145000 - WRITE RESPONSE HANDSHAKE: BRESP=00
+Time: 145000 - Write completed: Addr=0x00000008, Data=0xcafebabe
+
+--- First READ Transaction ---
+Time: 145000 - Reading from address 0x00000004 (expecting 0xDEADBEEF)
+
+--- Signal Monitor at Time: 175000 ---
+MASTER STATE: 3 (   RADDR_CHANNEL)
+SLAVE STATE:  0 (            IDLE)
+  READ ADDR:    ARVALID=1, ARREADY=0, ARADDR=0x00000004
+  READ DATA:    RVALID=0, RREADY=1, RDATA=0x00000000, RRESP=00
+
+--- Signal Monitor at Time: 185000 ---
+MASTER STATE: 3 (   RADDR_CHANNEL)
+SLAVE STATE:  3 (   RADDR_CHANNEL)
+  READ ADDR:    ARVALID=1, ARREADY=1, ARADDR=0x00000004
+  READ DATA:    RVALID=0, RREADY=1, RDATA=0x00000000, RRESP=00
+Time: 185000 - READ ADDRESS HANDSHAKE: Addr=0x00000004
+
+--- Signal Monitor at Time: 195000 ---
+MASTER STATE: 4 (   RDATA_CHANNEL)
+SLAVE STATE:  4 (   RDATA_CHANNEL)
+  READ DATA:    RVALID=1, RREADY=1, RDATA=0xdeadbeef, RRESP=00
+  READ DATA MONITOR: RDATA=0xdeadbeef, RVALID=1, RREADY=1
+Time: 195000 - READ DATA HANDSHAKE: Addr=0x00000000, Data=0xdeadbeef, RRESP=00
+Time: 195000 - READ DATA AVAILABLE: RDATA=0xdeadbeef, RVALID=1, RREADY=1
+Time: 195000 - SLAVE MEMORY READ: register_file[1] = 0x00000000
+Time: 195000 - ✓ READ PASS: Addr=0x00000004, Expected=0xdeadbeef, Actual=0xdeadbeef
+
+--- Third WRITE Transaction ---
+Time: 195000 - Writing 0x12345678 to address 0x0000000C
+
+--- Signal Monitor at Time: 225000 ---
+MASTER STATE: 1 (   WRITE_CHANNEL)
+SLAVE STATE:  0 (            IDLE)
+  WRITE ADDR:   AWVALID=1, AWREADY=0, AWADDR=0x0000000c
+  WRITE DATA:   WVALID=1, WREADY=0, WDATA=0x12345678, WSTRB=1111
+  WRITE RESP:   BVALID=0, BREADY=1, BRESP=00
+
+--- Signal Monitor at Time: 235000 ---
+MASTER STATE: 1 (   WRITE_CHANNEL)
+SLAVE STATE:  1 (   WRITE_CHANNEL)
+  WRITE ADDR:   AWVALID=1, AWREADY=1, AWADDR=0x0000000c
+  WRITE DATA:   WVALID=1, WREADY=1, WDATA=0x12345678, WSTRB=1111
+  WRITE RESP:   BVALID=0, BREADY=1, BRESP=00
+Time: 235000 - WRITE ADDRESS HANDSHAKE: Addr=0x0000000c
+Time: 235000 - WRITE DATA HANDSHAKE: Data=0x12345678
+
+--- Signal Monitor at Time: 245000 ---
+MASTER STATE: 2 (   WRESP_CHANNEL)
+SLAVE STATE:  2 (   WRESP_CHANNEL)
+  WRITE RESP:   BVALID=1, BREADY=1, BRESP=00
+Time: 245000 - WRITE RESPONSE HANDSHAKE: BRESP=00
+Time: 245000 - Write completed: Addr=0x0000000c, Data=0x12345678
+
+--- Second READ Transaction ---
+Time: 245000 - Reading from address 0x00000008 (expecting 0xCAFEBABE)
+
+--- Signal Monitor at Time: 275000 ---
+MASTER STATE: 3 (   RADDR_CHANNEL)
+SLAVE STATE:  0 (            IDLE)
+  READ ADDR:    ARVALID=1, ARREADY=0, ARADDR=0x00000008
+  READ DATA:    RVALID=0, RREADY=1, RDATA=0x00000000, RRESP=00
+
+--- Signal Monitor at Time: 285000 ---
+MASTER STATE: 3 (   RADDR_CHANNEL)
+SLAVE STATE:  3 (   RADDR_CHANNEL)
+  READ ADDR:    ARVALID=1, ARREADY=1, ARADDR=0x00000008
+  READ DATA:    RVALID=0, RREADY=1, RDATA=0x00000000, RRESP=00
+Time: 285000 - READ ADDRESS HANDSHAKE: Addr=0x00000008
+
+--- Signal Monitor at Time: 295000 ---
+MASTER STATE: 4 (   RDATA_CHANNEL)
+SLAVE STATE:  4 (   RDATA_CHANNEL)
+  READ DATA:    RVALID=1, RREADY=1, RDATA=0xcafebabe, RRESP=00
+  READ DATA MONITOR: RDATA=0xcafebabe, RVALID=1, RREADY=1
+Time: 295000 - READ DATA HANDSHAKE: Addr=0x00000000, Data=0xcafebabe, RRESP=00
+Time: 295000 - READ DATA AVAILABLE: RDATA=0xcafebabe, RVALID=1, RREADY=1
+Time: 295000 - SLAVE MEMORY READ: register_file[2] = 0x00000000
+Time: 295000 - ✓ READ PASS: Addr=0x00000008, Expected=0xcafebabe, Actual=0xcafebabe
+
+--- Fourth WRITE Transaction ---
+Time: 295000 - Writing 0x87654321 to address 0x00000010
+
+--- Signal Monitor at Time: 325000 ---
+MASTER STATE: 1 (   WRITE_CHANNEL)
+SLAVE STATE:  0 (            IDLE)
+  WRITE ADDR:   AWVALID=1, AWREADY=0, AWADDR=0x00000010
+  WRITE DATA:   WVALID=1, WREADY=0, WDATA=0x87654321, WSTRB=1111
+  WRITE RESP:   BVALID=0, BREADY=1, BRESP=00
+
+--- Signal Monitor at Time: 335000 ---
+MASTER STATE: 1 (   WRITE_CHANNEL)
+SLAVE STATE:  1 (   WRITE_CHANNEL)
+  WRITE ADDR:   AWVALID=1, AWREADY=1, AWADDR=0x00000010
+  WRITE DATA:   WVALID=1, WREADY=1, WDATA=0x87654321, WSTRB=1111
+  WRITE RESP:   BVALID=0, BREADY=1, BRESP=00
+Time: 335000 - WRITE ADDRESS HANDSHAKE: Addr=0x00000010
+Time: 335000 - WRITE DATA HANDSHAKE: Data=0x87654321
+
+--- Signal Monitor at Time: 345000 ---
+MASTER STATE: 2 (   WRESP_CHANNEL)
+SLAVE STATE:  2 (   WRESP_CHANNEL)
+  WRITE RESP:   BVALID=1, BREADY=1, BRESP=00
+Time: 345000 - WRITE RESPONSE HANDSHAKE: BRESP=00
+Time: 345000 - Write completed: Addr=0x00000010, Data=0x87654321
+
+--- Final IDLE Phase ---
+
+=== All Transactions Completed ===
+Total simulation time: 395000
+
+=== Enhanced Simulation Summary ===
+Testbench completed successfully
+Check waveform file: axi4_lite_test.vcd
+All AXI4-Lite transactions executed as per sequence:
+  1. IDLE
+  2. WRITE (0xDEADBEEF to 0x04)
+  3. WRITE (0xCAFEBABE to 0x08)
+  4. READ (from 0x04) - with verification
+  5. WRITE (0x12345678 to 0x0C)
+  6. READ (from 0x08) - with verification
+  7. WRITE (0x87654321 to 0x10)
+
+Enhanced features:
+  - Read data capture and verification
+  - Memory content monitoring
+  - Improved waveform signals for read transactions
+$finish called at time : 395 ns : File "D:/Xilinx_project/axi4_lite_F/axi4_lite_F.srcs/sim_1/new/axi4_lite_top_tb.sv" Line 118
